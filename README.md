@@ -31,6 +31,18 @@ This will produce a `k6` binary in the project directory.
 
 ### Unit Tests
 
+Run the unit tests using the following command:
+
+```sh
+make test-unit
+```
+
+To see coverage reports, you can run:
+
+```sh
+make coverage
+```
+
 ### Integration Tests
 
 Run your k6 test script (see `examples/`) with the custom k6 binary:
@@ -42,7 +54,7 @@ Run your k6 test script (see `examples/`) with the custom k6 binary:
 Or:
 
 ```sh
-make test TEST=examples/basic.js
+make test-k6 TEST=examples/basic.js
 ```
 
 You can also build, run `docker compose` and run a test using Make:
