@@ -1,0 +1,14 @@
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Build artifacts and Test files
+node_modules
+/k6
+
+# IDE specific files
+.vscode
+.idea
+
+# Logs
+*.log

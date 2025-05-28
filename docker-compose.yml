@@ -1,0 +1,13 @@
+services:
+  socketio-server:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - ./test:/app
+    command: sh -c "npm install socket.io@4 && node server.js"
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
+    # You can add more configuration here if needed

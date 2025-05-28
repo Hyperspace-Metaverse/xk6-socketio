@@ -1,0 +1,14 @@
+{
+  "name": "@types/xk6-socketio",
+  "version": "1.0.0",
+  "description": "TypeScript type definitions for the xk6-socketio API.",
+  "main": "index.d.ts",
+  "types": "index.d.ts",
+  "keywords": ["k6", "socket.io", "types", "typescript", "load-testing"],
+  "author": "Miguel Angelo Sepulveda",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hyperspace-Metaverse/xk6-socketio.git"
+  }
+}
