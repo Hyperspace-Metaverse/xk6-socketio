@@ -4,26 +4,45 @@ This package provides TypeScript type definitions for the [xk6-socketio](../READ
 
 ## Installation
 
-Copy or link this `@types/xk6-socketio` directory into your project, or publish it to npm and install via:
+Install via npm:
 
 ```sh
-npm install @types/xk6-socketio
+npm install xk6-socketio-types
 ```
 
 ## Usage
 
-Reference the types in your TypeScript k6 scripts:
+Import types in your k6 scripts:
 
 ```ts
 // @ts-ignore
-import { connect, SocketIOClient } from '@types/xk6-socketio';
+import { connect, emit, emitWithAck, disconnect } from 'xk6-socketio-types';
 
 export default function () {
-  const socket: SocketIOClient = connect('ws://localhost:3000');
-  socket.emit('event', { foo: 'bar' });
-  socket.disconnect();
+  connect('ws://localhost:3000');
+  emit('event', { foo: 'bar' });
+  const ack = emitWithAck('ackevent', { foo: 'bar' });
+  disconnect();
 }
 ```
+
+## API
+
+### `connect(url: string): void`
+
+Connect to a Socket.IO server.
+
+### `emit(event: string, data: any): void`
+
+Emit an event to the server.
+
+### `emitWithAck(event: string, data: any, timeout?: number): any`
+
+Emit an event and wait for an acknowledgement. Returns the acknowledgement response or a timeout error object.
+
+### `disconnect(): void`
+
+Disconnect from the server.
 
 ## Contributing
 

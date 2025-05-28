@@ -1,5 +1,5 @@
 {
-  "name": "@types/xk6-socketio",
+  "name": "xk6-socketio-types",
   "version": "1.0.0",
   "description": "TypeScript type definitions for the xk6-socketio API.",
   "main": "index.d.ts",
